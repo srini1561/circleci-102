@@ -9,7 +9,6 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, Mumbai.
-
   two:
    build:
      docker:
@@ -18,8 +17,7 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command: echo Hello, Hyd.
-		  
+          command: echo Hello, Hyd	  
 workflows:
  version: 2
    one_and_two:
