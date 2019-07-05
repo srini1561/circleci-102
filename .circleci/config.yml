@@ -8,13 +8,7 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command: echo Hello, Mumbai.
-      - run:
-          name: Print the Current Time
-          command: date
-      - run:
-          name: get the user info
-          command: whoami
+          command: echo Hello, Mumbai
 
    two:
     build:
