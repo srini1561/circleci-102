@@ -1,20 +1,29 @@
 version: 2
 jobs:
-  build:
-    docker:
+  one:
+   build:
+     docker:
       - image: debian:stretch
-    steps:
+     steps:
       - checkout
       - run:
           name: Greeting
           command: echo Hello, Mumbai.
 
-
-  build:
-    docker:
+  two:
+   build:
+     docker:
       - image: debian:stretch
-    steps:
+     steps:
       - checkout
       - run:
           name: Greeting
           command: echo Hello, Hyd.
+		  
+workflows:
+ version: 2
+   one_and_two:
+      jobs:
+       - one
+       - two
+ 
