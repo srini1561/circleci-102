@@ -16,21 +16,15 @@ jobs:
           name: get the user info
           command: whoami
 
- two:
-  build:
-    docker:
+   two:
+    build:
+     docker:
       - image: debian:stretch
     steps:
       - checkout
       - run:
           name: Greeting
-          command: echo Hello, Mumbai.
-      - run:
-          name: Print the Current Time
-          command: date
-      - run:
-          name: get the user info
-          command: whoami
+          command: echo Hello, world.
  workflows:
    version: 2
    one_and_two:
