@@ -9,22 +9,3 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, Mumbai
-
-   two:
-    build:
-     docker:
-      - image: debian:stretch
-    steps:
-      - checkout
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-  workflows:
-      version: 2
-        one_and_two:
-            jobs:
-            - one
-            - two
-     
-          
-
