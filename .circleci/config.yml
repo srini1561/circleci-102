@@ -8,3 +8,13 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, Mumbai.
+
+
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, Hyd.
