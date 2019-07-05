@@ -1,11 +1,10 @@
 version: 2
 jobs:
-   one:
-   build:
+  build:
     docker:
       - image: debian:stretch
     steps:
       - checkout
       - run:
           name: Greeting
-          command: echo Hello, Mumbai
+          command: echo Hello, Mumbai.
